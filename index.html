@@ -10,71 +10,76 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>To Do</title>
+    <title>TODO</title>
   </head>
   <body>
+    <!-- Main container -->
     <div class="container">
       <div class="shadow"></div>
+      <!-- TODO Box -->
       <div class="todo-app">
+        <!-- Date and TIme -->
         <div class="today">
           <div class="day"><h2 id="hello">Thursday</h2></div>
           <div class="full-date"><p>Mar 23, 2018</p></div>
         </div>
 
+        <!-- TODO input form -->
         <form class="input">
           <input type="text" placeholder="Add a task..." id="task-field" />
           <input type="submit" value="Add" id="task-btn" />
         </form>
 
+        <!-- TODO lists -->
         <div class="todo">
           <div class="todo-item">
-            <label class="todo-label">
-              <input type="checkbox" id="todo-checked" />
-              <p>Identify resources to be monitored.</p>
-            </label>
-            <button>Remove</button>
+            <div class="todo-label">
+              <input type="checkbox" class="checked" />
+              <p class="text">Identify resources to be monitored.</p>
+            </div>
+            <button class="remove-btn">Remove</button>
           </div>
 
           <div class="todo-item">
-            <label class="todo-label">
-              <input type="checkbox" id="todo-checked" />
-              <p>Define users and workflow</p>
-            </label>
-            <button>Remove</button>
+            <div class="todo-label">
+              <input type="checkbox" class="checked" />
+              <p class="text">Define users and workflow</p>
+            </div>
+            <button class="remove-btn">Remove</button>
           </div>
 
           <div class="todo-item">
-            <label class="todo-label">
-              <input type="checkbox" id="todo-checked" />
-              <p>Identify event sources by resource type.</p>
-            </label>
-            <button>Remove</button>
+            <div class="todo-label">
+              <input type="checkbox" class="checked" />
+              <p class="text">Identify event sources by resource type.</p>
+            </div>
+            <button class="remove-btn">Remove</button>
           </div>
 
           <div class="todo-item">
-            <label class="todo-label">
-              <input type="checkbox" id="todo-checked" />
-              <p>
+            <div class="todo-label">
+              <input type="checkbox" class="checked" />
+              <p class="text">
                 Define the relationship between resources and business systems.
               </p>
-            </label>
-            <button>Remove</button>
+            </div>
+            <button class="remove-btn">Remove</button>
           </div>
 
           <div class="todo-item">
-            <label class="todo-label">
-              <input type="checkbox" id="todo-checked" />
-              <p>Identify tasks and URLs by resource type.</p>
-            </label>
-            <button>Remove</button>
+            <div class="todo-label">
+              <input type="checkbox" class="checked" />
+              <p class="text">Identify tasks and URLs by resource type.</p>
+            </div>
+            <button class="remove-btn">Remove</button>
           </div>
 
           <div class="todo-item">
-            <label class="todo-label">
-              <input type="checkbox" id="todo-checked" />
-              <p>Define the server configuration.</p>
-            </label>
-            <button>Remove</button>
+            <div class="todo-label">
+              <input type="checkbox" class="checked" />
+              <p class="text">Define the server configuration.</p>
+            </div>
+            <button class="remove-btn">Remove</button>
           </div>
         </div>
       </div>

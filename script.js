@@ -5,22 +5,19 @@
  * Date: 25-10-21
  */
 
-// Select Elements
+// Select All Elements
 let day = document.querySelector(".day h2");
 let fullDate = document.querySelector(".full-date p");
 
-let form = document.querySelector("form");
+let todo = document.querySelector(".todo");
 let textInput = document.querySelector("#task-field");
 let submitBtn = document.querySelector("#task-btn");
-
-let todo = document.querySelector(".todo");
-let todoItem = document.querySelector(".todo-item");
-let todoLabel = document.querySelector(".todo-label");
-let todoChecked = document.getElementById("todo-checked");
+let text = document.querySelector("text");
 
 // Date and Time
 const d = new Date();
 
+// Week days names
 const dayNames = [
   "Sunday",
   "Monday",
@@ -31,6 +28,7 @@ const dayNames = [
   "Saturday",
 ];
 
+// Month Names
 const monthNames = [
   "Jan",
   "Feb",
@@ -46,6 +44,7 @@ const monthNames = [
   "Dec",
 ];
 
+// Get date and time
 let todayName = dayNames[d.getDay()];
 let thisMonth = monthNames[d.getMonth()];
 let thisDate = d.getDate();
@@ -54,23 +53,57 @@ let thisYear = d.getFullYear();
 day.innerHTML = todayName;
 fullDate.innerHTML = `${thisMonth} ${thisDate}, ${thisYear}`;
 
-let todoElements = (task) => {
-  let addTodoItem = document.createElement('div');
-  let addTodoLabel = document.createElement('label');
-  let addTodoInput = document.createElement('input');
-  let addTodoContent = document.createElement('p');
+// Event Linteners
+submitBtn.addEventListener("click", addTodo); // Add TODO Text
+todo.addEventListener("click", removeTodo); // Remove TODO text
 
-  addTodoItem.className = 'todo-item';
-  addTodoLabel.className = 'todo-label';
-  addTodoInput.type = 'checkbox';
-  addTodoInput.setAttribute('id', 'todo-checked');
-  addTodoContent.innerHTML = task;
+// Function for adding text to the todo list
+function addTodo(event) {
+  // Prevent Default
+  event.preventDefault();
 
-  addTodoItem.appendChild(addTodoLabel);
-  addTodoLabel.appendChild(addTodoInput);
-  addTodoLabel.appendChild(addTodoContent);
+  // Create TODO Elements
+  let todoItem = document.createElement("div");
+  let todoLabel = document.createElement("div");
+  let todoInput = document.createElement("input");
+  let todoContent = document.createElement("p");
+  let removeBtn = document.createElement("button");
 
-  return addTodoItem;
+  // Add Classes, Ids, and Types
+  todoItem.className = "todo-item";
+  todoLabel.className = "todo-label";
+  todoInput.className = "checked";
+  removeBtn.className = "remove-btn";
+  todoContent.className = "text";
+  todoInput.type = "checkbox";
+
+  // Elements Inner Text
+  todoContent.innerHTML = textInput.value;
+  removeBtn.innerHTML = "Remove";
+
+  // Append Elements
+  todoItem.appendChild(todoLabel);
+  todoItem.appendChild(removeBtn);
+  todoLabel.appendChild(todoInput);
+  todoLabel.appendChild(todoContent);
+  todo.appendChild(todoItem);
+
+  // Clear input
+  textInput.value = "";
 }
 
-console.log(textInput.value);
+// Function for removing text form the TODO list
+function removeTodo(e) {
+  const item = e.target;
+
+  // Remove elements
+  if (item.classList[0] === "remove-btn") {
+    item.parentNode.remove();
+  }
+
+  // Mark as completed
+  if (item.classList[0] === "checked") {
+    completed = item.parentNode;
+    completed.classList.toggle("completed");
+  }
+}

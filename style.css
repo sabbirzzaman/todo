@@ -38,7 +38,6 @@ p {
 .todo-app {
     background-color: hsl(154deg 89% 4%);
     width: 600px;
-    height: 80%;
     border-radius: 8px;
     box-shadow: 0px 5px 50px -5px hsl(214deg 97% 27% / 52%);
     padding: 40px 40px;
@@ -96,6 +95,9 @@ input#task-btn:focus {
     display: flex;
     gap: 10px;
     align-items: baseline;
+}
+
+input[type=checkbox] {
     cursor: pointer;
 }
 
@@ -117,4 +119,8 @@ input#task-btn:focus {
 
 .todo-item button:hover {
     background: #BA2D0B;
+}
+
+.completed p {
+    text-decoration: line-through;
 }
