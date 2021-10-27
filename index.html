@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shadow"></div>
+      <div class="todo-app">
+        <div class="today">
+          <div class="day"><h2 id="hello">Thursday</h2></div>
+          <div class="full-date"><p>Mar 23, 2018</p></div>
+        </div>
+
+        <form class="input">
+          <input type="text" placeholder="Add a task..." id="task-field" />
+          <input type="submit" value="Add" id="task-btn" />
+        </form>
+
+        <div class="todo">
+          <div class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" id="todo-checked" />
+              <p>Identify resources to be monitored.</p>
+            </label>
+            <button>Remove</button>
+          </div>
+
+          <div class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" id="todo-checked" />
+              <p>Define users and workflow</p>
+            </label>
+            <button>Remove</button>
+          </div>
+
+          <div class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" id="todo-checked" />
+              <p>Identify event sources by resource type.</p>
+            </label>
+            <button>Remove</button>
+          </div>
+
+          <div class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" id="todo-checked" />
+              <p>
+                Define the relationship between resources and business systems.
+              </p>
+            </label>
+            <button>Remove</button>
+          </div>
+
+          <div class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" id="todo-checked" />
+              <p>Identify tasks and URLs by resource type.</p>
+            </label>
+            <button>Remove</button>
+          </div>
+
+          <div class="todo-item">
+            <label class="todo-label">
+              <input type="checkbox" id="todo-checked" />
+              <p>Define the server configuration.</p>
+            </label>
+            <button>Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

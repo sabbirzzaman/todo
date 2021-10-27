@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 60px;
+    color: #D5F2E3;
+}
+
+p {
+    color: #D5F2E3;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(154deg 89% 4%);
+    background-image: url(images/todo-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.shadow {
+    position: absolute;
+    background: hsl(154deg 89% 4% / 36%);
+    width: 100%;
+    height: 100%;
+}
+
+.todo-app {
+    background-color: hsl(154deg 89% 4%);
+    width: 600px;
+    height: 80%;
+    border-radius: 8px;
+    box-shadow: 0px 5px 50px -5px hsl(214deg 97% 27% / 52%);
+    padding: 40px 40px;
+    text-align: center;
+    z-index: 100;
+}
+
+.today {
+    margin-bottom: 20px;
+}
+
+.full-date p {
+    color: #73BA9B;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+input#task-field {
+    padding: 4px 10px;
+    background: #D5F2E3;
+    border: 1px solid #73BA9B;
+    border-radius: 5px 0 0 5px;
+}
+
+input#task-field:focus {
+    outline: 1px dashed #73BA9B;
+}
+
+input#task-btn {
+    padding: 4px 10px;
+    background: #003E1F;
+    border: none;
+    color: #D5F2E3;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+input#task-btn:focus {
+    outline: 1px dashed #73BA9B;
+}
+
+.todo {
+    color: #D5F2E3;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.todo-label {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.todo-item button {
+    padding: 3px 10px;
+    background: transparent;
+    border: none;
+    color: #D5F2E3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.todo-item button:hover {
+    background: #BA2D0B;
+}
