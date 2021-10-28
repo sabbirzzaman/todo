@@ -22,7 +22,7 @@ p {
     justify-content: center;
     align-items: center;
     background-color: hsl(154deg 89% 4%);
-    background-image: url(images/todo-bg.jpg);
+    background-image: url(./Images/todo-bg.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -95,9 +95,6 @@ input#task-btn:focus {
     display: flex;
     gap: 10px;
     align-items: baseline;
-}
-
-input[type=checkbox] {
     cursor: pointer;
 }
 
